@@ -1,13 +1,21 @@
+'''App for splitting the cost on a receipt.
+Pass in a CSV file where each row has the format:
+    <item name>,<item cost>,<people list>
+where <people list> is a space-separated list of people to split the cost of this item with'''
 from argparse import ArgumentParser
 from decimal import Decimal
 from pathlib import Path
 import sys
 
+
 def main():
     parser = ArgumentParser(
-        prog='receiptsplitter',
+        epilog=__doc__
     )
-    parser.add_argument('file')
+    parser.add_argument(
+        'file',
+        help='The filename of the receipt CSV file'
+    )
     args = parser.parse_args()
     file = Path(args.file)
     if not file.is_file():
