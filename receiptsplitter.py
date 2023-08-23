@@ -10,7 +10,7 @@ import sys
 
 def main():
     parser = ArgumentParser(
-        epilog=__doc__
+        description=__doc__
     )
     parser.add_argument(
         'file',
