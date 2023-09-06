@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "receiptsplitter"
-version = "0.0.1"
+name = "billsplitter"
+version = "1.0.0"
 authors = [
   { name="Elli Greaves" },
 ]
@@ -19,7 +19,7 @@ classifiers = [
 ]
 
 [project.scripts]
-receiptsplitter = "receiptsplitter:main"
+billsplitter = "billsplitter:main"
 
 [project.urls]
 "Homepage" = "https://github.com/Grvs44/receiptsplitter"
