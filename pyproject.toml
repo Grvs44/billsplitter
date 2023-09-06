@@ -9,7 +9,7 @@ authors = [
   { name="Elli Greaves" },
 ]
 license = { text = "BSD-3-Clause-Clear license" }
-description = "App for splitting the cost on a receipt"
+description = "App for splitting the cost of bills or receipts"
 readme = "README.md"
 requires-python = ">=3.10,<4"
 classifiers = [
@@ -22,4 +22,4 @@ classifiers = [
 billsplitter = "billsplitter:main"
 
 [project.urls]
-"Homepage" = "https://github.com/Grvs44/receiptsplitter"
+"Homepage" = "https://github.com/Grvs44/billsplitter"
