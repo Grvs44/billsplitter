@@ -31,6 +31,8 @@ def main():
     people = {}
     for line in csv:
         item = line.split(',')
+        if len(item) < 3:
+            continue
         payers = item[2].split(' ')
         if not payers:
             print('No payers for item', line)
@@ -39,7 +41,8 @@ def main():
         payer_amount = amount / len(payers)
         for person in payers:
             people[person] = people.get(person, 0) + payer_amount
-        payees = item[3].split(' ') if len(item) >= 4 else (args.default_payee,)
+        payees = item[3].split(' ') if len(
+            item) >= 4 else (args.default_payee,)
         payee_amount = amount / len(payees)
         for person in payees:
             people[person] = people.get(person, 0) - payee_amount
